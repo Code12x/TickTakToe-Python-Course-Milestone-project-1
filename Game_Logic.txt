@@ -1,0 +1,10 @@
+1. Player setup
+2. draw initial board
+3. game loop
+  a. user input
+  b. update board
+  c. check board
+    1. if player won
+      1. True: play again?
+      2. False: pass
+4. end
