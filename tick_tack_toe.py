@@ -102,16 +102,6 @@ while play_again:
         draw_board(board)
 
         # Check Board
-        # make sure the board isn't full
-        full = True
-        for x in range(1, 10):
-            if board[x] == " ":
-                full = False
-                break
-        if full:
-            print("It is a tie!")
-            break
-
         solution_list = [[7, 8, 9],
                          [4, 5, 6],
                          [1, 2, 3],
@@ -128,6 +118,16 @@ while play_again:
                 print("Congratulations, " + player.get_name() + "! You won!")
                 player_won = True
                 break
+
+        # make sure the board isn't full
+        full = True
+        for x in range(1, 10):
+            if board[x] == " ":
+                full = False
+                break
+        if full and not player_won:
+            print("It is a tie!")
+            break
 
         player = player_list[abs(player_list.index(player)-1)]
 
